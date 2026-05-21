@@ -1,36 +1,227 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Madeleine KOKO — Portfolio Officiel
 
-## Getting Started
+Portfolio digital de Madeleine KOKO, styliste et directrice artistique mettant en avant ses collections, défilés, projets éditoriaux et collaborations créatives.
 
-First, run the development server:
+Le site propose une expérience élégante, immersive et responsive inspirée des univers luxe, mode et direction artistique.
+
+## Aperçu
+
+Le portfolio permet de :
+
+- Présenter le profil et l'univers créatif de Madeleine KOKO
+- Mettre en avant les collections et projets récents
+- Afficher les défilés et événements marquants
+- Exposer une galerie éditoriale
+- Permettre la prise de contact professionnelle
+- Rediriger vers WhatsApp et réseaux sociaux
+- Recevoir les demandes via EmailJS
+
+---
+
+## Stack technique
+
+- Next.js 15
+- React
+- TypeScript
+- Tailwind CSS
+- EmailJS
+- Responsive Design
+- Animations personnalisées
+- Intersection Observer API
+- Optimisations SEO
+
+---
+
+## Structure du projet
+
+```bash
+src/
+│
+├── app/
+│   ├── about/
+│   ├── collections/
+│   ├── events/
+│   ├── gallery/
+│   ├── contact/
+│   └── page.tsx
+│
+├── components/
+│   ├── layout/
+│   ├── sections/
+│   ├── ui/
+│   └── shared/
+│
+├── context/
+│   └── AppContext.tsx
+│
+├── data/
+│   ├── stylist.ts
+│   ├── collections.ts
+│   ├── events.ts
+│   ├── gallery.ts
+│   └── types.ts
+│
+├── hooks/
+├── lib/
+├── styles/
+└── public/
+    └── assets/
+        └── images/
+````
+
+---
+
+## Installation
+
+Cloner le projet :
+
+```bash
+git clone <repository-url>
+```
+
+Accéder au dossier :
+
+```bash
+cd madeleine-koko-portfolio
+```
+
+Installer les dépendances :
+
+```bash
+npm install
+```
+
+ou
+
+```bash
+yarn
+```
+
+Lancer le serveur de développement :
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Le projet sera accessible sur :
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Variables d'environnement
 
-To learn more about Next.js, take a look at the following resources:
+Créer un fichier `.env.local` à la racine du projet :
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```env
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Compléter les valeurs avec les informations EmailJS.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Déploiement
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Le projet peut être déployé sur :
+
+* Vercel
+* Netlify
+* VPS
+* Docker
+* GitHub Actions CI/CD
+
+Déploiement Vercel :
+
+```bash
+npm run build
+```
+
+Puis connecter le dépôt à Vercel.
+
+---
+
+## Fonctionnalités
+
+### Accueil
+
+* Hero section immersive
+* Présentation rapide
+* Collections mises en avant
+* Événements sélectionnés
+* Appel à l'action
+
+### À propos
+
+* Biographie
+* Parcours
+* Expériences
+* Statistiques professionnelles
+
+### Collections
+
+* Catalogue de collections
+* Filtres par catégorie
+* Mise en page éditoriale
+
+### Événements
+
+* Défilés
+* Galas
+* Collaborations
+
+### Galerie
+
+* Affichage dynamique
+* Lightbox interactive
+* Catégories
+
+### Contact
+
+* Formulaire EmailJS
+* WhatsApp
+* Réseaux sociaux
+
+---
+
+## Responsive
+
+Le projet est optimisé pour :
+
+* Mobile
+* Tablette
+* Desktop
+* Écrans larges
+
+---
+
+## SEO
+
+Optimisations incluses :
+
+* Métadonnées dynamiques
+* Open Graph
+* Structure sémantique
+* Performance optimisée
+* Images optimisées
+
+---
+
+## Auteur
+
+Développé par Chablis Mahutin
+
+Full-Stack Developer • DevOps • UI/UX Enthusiast
+
+---
+
+## Licence
+
+Ce projet est destiné à l'usage du portfolio officiel de Madeleine KOKO.
+
+Tous les contenus, images, créations et éléments graphiques restent la propriété de Madeleine KOKO.
+

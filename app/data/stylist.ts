@@ -1,67 +1,79 @@
 // ─── Stylist Static Data ─────────────────────────────────────────────────────
 
 export const STYLIST = {
-  name: "KOKO Madeleine",
+  name: "Madeleine KOKO",
   nameFirst: "Madeleine",
-  nameLast: "Koko",
-  title: "Styliste & Directrice Artistique",
-  titleEn: "Fashion Stylist & Creative Director",
-  tagline: "L'art de sublimer le vêtement, la femme, le moment.",
-  taglineEn: "The art of elevating the garment, the woman, the moment.",
+  nameLast: "ADONNONDE",
 
-  shortBio: `Madeleine ADONNONDE est une styliste de mode établie entre Paris et Milan,
-  reconnue pour son œil éditorial exigeant et sa capacité à créer des univers
-  visuels d'une rare cohérence. Son travail transcende la mode pour toucher à
-  l'art de la mise en scène.`,
+  title: "Styliste • Modéliste • Créatrice de mode",
+  titleEn: "Fashion Stylist • Pattern Maker • Fashion Designer",
+
+  tagline:
+    "Une signature unique où créativité, élégance et identité se rencontrent.",
+
+  taglineEn:
+    "A unique signature where creativity, elegance and identity meet.",
+
+  shortBio: `Madeleine ADONNONDE, connue sous le nom de Madeleine KOKO, est une styliste,
+  modéliste et créatrice de mode béninoise. Fondatrice de la marque Koko Made,
+  elle développe un univers où chaque création raconte une histoire à travers
+  les formes, les détails et une touche personnelle devenue sa signature.`,
 
   fullBio: [
-    `Née à Florence dans une famille d'artisans du cuir, Madeleine ADONNONDE a grandi
-    entre les ateliers de couture et les galeries d'art florentines. Cette double
-    culture — artisanat ancestral et avant-garde contemporaine — forge dès l'enfance
-    un regard singulier sur l'objet vêtement.`,
+    `Née et formée au Bénin, Madeleine ADONNONDE développe très tôt une passion
+    pour la création vestimentaire. Fascinée par les textures, les silhouettes
+    et l'élégance des détails, elle transforme progressivement cette passion en
+    véritable identité artistique.`,
 
-    `Après des études à l'Institut Français de la Mode à Paris, elle intègre les
-    équipes de Maison Valentino comme assistante stylisme, puis collabore avec
-    Vogue Italia, Harper's Bazaar et L'Officiel. Ses editoriaux se distinguent par
-    une esthétique minimaliste et architecturale, où chaque image raconte une histoire
-    complète.`,
+    `Au fil de son parcours, elle affine son savoir-faire dans le stylisme,
+    le modélisme et la création de mode. Son travail se distingue par une
+    approche créative qui allie modernité, personnalité et sens du détail,
+    donnant naissance à des pièces pensées pour mettre en valeur la personne
+    qui les porte.`,
 
-    `En 2016, Madeleine fonde son propre studio à Paris, au cœur du Marais. Elle y
-    développe une activité de direction artistique pour des maisons de luxe, des
-    collections capsule, et des événements mode dans les plus beaux hôtels d'Europe.
-    Sa méthode : une préparation méticuleuse, un casting précis, et cette conviction
-    que le luxe véritable se ressent, il ne se montre pas.`,
+    `À travers sa marque Koko Made, Madeleine construit un univers créatif
+    qui reflète sa vision : créer des vêtements qui vont au-delà du tissu,
+    pour exprimer une identité, une émotion et une présence.`,
 
-    `Aujourd'hui, Madeleine collabore avec des créateurs émergents et des maisons établies
-    pour construire des identités visuelles mémorables. Son portfolio traverse les
-    frontières entre mode, architecture et photographie contemporaine.`,
+    `Elle a participé à plusieurs défilés et événements de mode organisés dans
+    des hôtels et lieux prestigieux au Bénin, où son travail est apprécié pour
+    son originalité et sa touche personnelle qui lui permettent de se démarquer
+    dans chacun de ses projets.`,
+
+    `Aujourd'hui, Madeleine poursuit son évolution artistique à travers de
+    nouvelles créations, collaborations et expériences, avec l'ambition de
+    faire rayonner l'univers Koko Made bien au-delà des frontières.`,
   ],
 
   stats: [
-    { value: "18+", label: "Années d'expérience" },
-    { value: "200+", label: "Collections stylisées" },
-    { value: "45+", label: "Couvertures magazine" },
-    { value: "12", label: "Pays" },
+    { value: "5+", label: "Années d'expérience" },
+    { value: "50+", label: "Créations réalisées" },
+    { value: "10+", label: "Défilés & événements" },
+    { value: "1", label: "Marque fondée" },
   ],
 
   press: [
-    "Vogue Italia",
-    "Harper's Bazaar",
-    "L'Officiel",
-    "Numéro",
-    "Madame Figaro",
-    "Elle France",
-    "Grazia",
-    "Purple Fashion",
+    "Koko Made",
+    "Fashion Show Bénin",
+    "Créations Exclusives",
+    "Défilés de Mode",
+    "Haute Couture",
+    "Stylisme",
+    "Création Textile",
+    "Mode Africaine",
   ],
 
   contact: {
-    email: "madeleine.koko@studio.com",
+    email: "contact@kokomade.com",
     phone: "+229 0162 533 781",
-    whatsapp: "0162 533 781",
-    whatsappMessage: "Bonjour Madeleine, je souhaite discuter d'une collaboration.",
+    whatsapp: "22962533781",
+
+    whatsappMessage:
+      "Bonjour Madeleine, je souhaite discuter d'une collaboration ou d'une création.",
+
     location: "Cotonou, Bénin",
-    studio: "12 Rue des Archives, 75004 Paris",
+
+    studio: "Studio Koko Made — Cotonou",
   },
 
   social: {
@@ -70,7 +82,6 @@ export const STYLIST = {
     linkedin: "https://www.linkedin.com/",
   },
 
-  // EmailJS config — to be replaced with real credentials
   emailjs: {
     serviceId: "YOUR_EMAILJS_SERVICE_ID",
     templateId: "YOUR_EMAILJS_TEMPLATE_ID",

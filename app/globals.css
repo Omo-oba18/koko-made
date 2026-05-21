@@ -530,3 +530,8 @@ body {
     padding-bottom: 4.5rem;
   }
 }
+
+.container-luxury {
+  margin: 0 auto;
+  padding: 2rem;
+}
