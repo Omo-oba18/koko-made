@@ -1,0 +1,127 @@
+// ─── Gallery Static Data ──────────────────────────────────────────────────────
+// Images: /public/assets/images/gallery/
+// Mix of portrait, landscape, square for masonry effect
+
+import { GalleryItem } from "./types";
+
+export const GALLERY_ITEMS : GalleryItem[] = [
+  {
+    id: "g-01",
+    src: "/assets/images/gallery/g-01.jpg",
+    alt: "Éditorial Lumière Blanche — Vogue",
+    caption: "Lumière Blanche",
+    category: "Éditorial",
+    size: "tall", // tall | wide | square
+    year: 2024,
+  },
+  {
+    id: "g-02",
+    src: "/assets/images/gallery/g-02.jpg",
+    alt: "Gala Ritz Paris — Red Carpet",
+    caption: "Gala Ritz",
+    category: "Événement",
+    size: "square",
+    year: 2024,
+  },
+  {
+    id: "g-03",
+    src: "/assets/images/gallery/g-03.jpg",
+    alt: "Portrait de mode — Studio Paris",
+    caption: "Studio Paris",
+    category: "Portrait",
+    size: "tall",
+    year: 2023,
+  },
+  {
+    id: "g-04",
+    src: "/assets/images/gallery/g-04.jpg",
+    alt: "Défilé Four Seasons Milan",
+    caption: "Four Seasons Milan",
+    category: "Défilé",
+    size: "wide",
+    year: 2024,
+  },
+  {
+    id: "g-05",
+    src: "/assets/images/gallery/g-05.jpg",
+    alt: "Look Book Terra Rossa",
+    caption: "Terra Rossa",
+    category: "Look Book",
+    size: "square",
+    year: 2024,
+  },
+  {
+    id: "g-06",
+    src: "/assets/images/gallery/g-06.jpg",
+    alt: "Backstage — Hôtel Le Bristol",
+    caption: "Backstage Bristol",
+    category: "Backstage",
+    size: "tall",
+    year: 2023,
+  },
+  {
+    id: "g-07",
+    src: "/assets/images/gallery/g-07.jpg",
+    alt: "Ombre & Grâce — Numéro Magazine",
+    caption: "Ombre & Grâce",
+    category: "Éditorial",
+    size: "square",
+    year: 2024,
+  },
+  {
+    id: "g-08",
+    src: "/assets/images/gallery/g-08.jpg",
+    alt: "Gala Croisette — Antibes",
+    caption: "Croisette",
+    category: "Événement",
+    size: "wide",
+    year: 2023,
+  },
+  {
+    id: "g-09",
+    src: "/assets/images/gallery/g-09.jpg",
+    alt: "Nuit de Velours — Opéra Garnier",
+    caption: "Nuit de Velours",
+    category: "Campagne",
+    size: "tall",
+    year: 2023,
+  },
+  {
+    id: "g-10",
+    src: "/assets/images/gallery/g-10.jpg",
+    alt: "Jardin Secret — Château de Vaux",
+    caption: "Jardin Secret",
+    category: "Campagne",
+    size: "square",
+    year: 2025,
+  },
+  {
+    id: "g-11",
+    src: "/assets/images/gallery/g-11.jpg",
+    alt: "Backstage Costes — Capsule 2025",
+    caption: "Costes Capsule",
+    category: "Backstage",
+    size: "tall",
+    year: 2025,
+  },
+  {
+    id: "g-12",
+    src: "/assets/images/gallery/g-12.jpg",
+    alt: "Éclat Minéral — Bijoux Hoffmann",
+    caption: "Éclat Minéral",
+    category: "Éditorial",
+    size: "wide",
+    year: 2023,
+  },
+];
+
+export const GALLERY_CATEGORIES = [
+  "Tous",
+  "Éditorial",
+  "Événement",
+  "Défilé",
+  "Campagne",
+  "Look Book",
+  "Portrait",
+  "Backstage",
+];
