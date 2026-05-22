@@ -1,90 +1,79 @@
-// ─── Stylist Static Data ─────────────────────────────────────────────────────
+import type { Stylist } from './types';
 
-export const STYLIST = {
-  name: "Madeleine KOKO",
-  nameFirst: "Madeleine",
-  nameLast: "ADONNONDE",
+export const STYLIST: Stylist = {
+  //brand: 'Koko Made',
+  name: 'Madeleine Koko',
+  nameFirst: 'Madeleine',
+  nameLast: 'Koko',
+  title: 'Styliste-Modéliste',
+  titleEn: 'Fashion Designer & Stylist',
+  tagline: "Tisser l'identité africaine dans chaque création.",
+  taglineEn: 'Weaving African identity into every creation.',
 
-  title: "Styliste • Modéliste • Créatrice de mode",
-  titleEn: "Fashion Stylist • Pattern Maker • Fashion Designer",
-
-  tagline:
-    "Une signature unique où créativité, élégance et identité se rencontrent.",
-
-  taglineEn:
-    "A unique signature where creativity, elegance and identity meet.",
-
-  shortBio: `Madeleine ADONNONDE, connue sous le nom de Madeleine KOKO, est une styliste,
-  modéliste et créatrice de mode béninoise. Fondatrice de la marque Koko Made,
-  elle développe un univers où chaque création raconte une histoire à travers
-  les formes, les détails et une touche personnelle devenue sa signature.`,
+  shortBio: `Madeleine Koko est une styliste-modéliste béninoise dont les créations
+célèbrent le patrimoine textile de l'Afrique de l'Ouest. Entre le tissu indigo
+traditionnel et les coupes contemporaines, elle construit un langage de mode
+singulier, ancré dans la culture béninoise et tourné vers le monde.`,
 
   fullBio: [
-    `Née et formée au Bénin, Madeleine ADONNONDE développe très tôt une passion
-    pour la création vestimentaire. Fascinée par les textures, les silhouettes
-    et l'élégance des détails, elle transforme progressivement cette passion en
-    véritable identité artistique.`,
+    `Originaire du Bénin, Madeleine Koko a grandi entourée des étoffes colorées
+des marchés de Cotonou et des savoirs-faire ancestraux des tisserands locaux.
+Cette immersion précoce dans la richesse textile de l'Afrique de l'Ouest a
+forgé sa vision : une mode qui honore ses racines sans jamais renoncer à
+l'innovation.`,
 
-    `Au fil de son parcours, elle affine son savoir-faire dans le stylisme,
-    le modélisme et la création de mode. Son travail se distingue par une
-    approche créative qui allie modernité, personnalité et sens du détail,
-    donnant naissance à des pièces pensées pour mettre en valeur la personne
-    qui les porte.`,
+    `Après une formation rigoureuse en stylisme-modélisme, Madeleine se distingue
+dès sa soutenance de fin de formation par la cohérence et la maturité de ses
+créations. Sa collection de diplôme, entièrement construite autour du tissu
+indigo du Bénin, révèle déjà sa signature : des silhouettes structurées,
+une palette profonde, un respect absolu du matériau.`,
 
-    `À travers sa marque Koko Made, Madeleine construit un univers créatif
-    qui reflète sa vision : créer des vêtements qui vont au-delà du tissu,
-    pour exprimer une identité, une émotion et une présence.`,
+    `Reconnue au sein de la Designer Académie, elle affine sa maîtrise technique
+et développe sa sensibilité éditoriale. Ses pièces sont présentées au Salon
+National des Artisans du Bénin (SNAB), où l'indigo devient le fil conducteur
+d'une collection saluée pour son dialogue entre artisanat traditionnel et
+esthétique contemporaine.`,
 
-    `Elle a participé à plusieurs défilés et événements de mode organisés dans
-    des hôtels et lieux prestigieux au Bénin, où son travail est apprécié pour
-    son originalité et sa touche personnelle qui lui permettent de se démarquer
-    dans chacun de ses projets.`,
-
-    `Aujourd'hui, Madeleine poursuit son évolution artistique à travers de
-    nouvelles créations, collaborations et expériences, avec l'ambition de
-    faire rayonner l'univers Koko Made bien au-delà des frontières.`,
+    `Sur scène au FESMMA et au Chiganvy Talent Show, Madeleine franchit un cap :
+ses créations sont portées, défilent, vibrent sous les projecteurs. Elle
+impose une présence artistique forte et confirme que la mode béninoise a
+ses propres codes, son propre éclat, sa propre voix.`,
   ],
 
   stats: [
-    { value: "5+", label: "Années d'expérience" },
-    { value: "50+", label: "Créations réalisées" },
-    { value: "10+", label: "Défilés & événements" },
-    { value: "1", label: "Marque fondée" },
+    { value: '5',   label: 'Événements majeurs' },
+    { value: '29',  label: 'Photos de portfolio' },
+    { value: '3',   label: 'Collections présentées' },
+    { value: '1',   label: 'Diplôme obtenu' },
   ],
 
   press: [
-    "Koko Made",
-    "Fashion Show Bénin",
-    "Créations Exclusives",
-    "Défilés de Mode",
-    "Haute Couture",
-    "Stylisme",
-    "Création Textile",
-    "Mode Africaine",
+    'SNAB Bénin',
+    'FESMMA',
+    'Chiganvy Talent Show',
+    'Designer Académie',
+    'Mode Africaine',
+    'Artisans du Bénin',
   ],
 
   contact: {
-    email: "contact@kokomade.com",
-    phone: "+229 0162 533 781",
-    whatsapp: "22962533781",
-
-    whatsappMessage:
-      "Bonjour Madeleine, je souhaite discuter d'une collaboration ou d'une création.",
-
-    location: "Cotonou, Bénin",
-
-    studio: "Studio Koko Made — Cotonou",
+    email: 'madeleine.koko@kokemade.com',
+    phone: '+229 01 23 45 67',
+    whatsapp: '22901234567',
+    whatsappMessage: "Bonjour Madeleine, je souhaite en savoir plus sur vos créations.",
+    location: 'Cotonou, Bénin',
+    studio: 'Studio Koko Made — Cotonou, Bénin',
   },
 
   social: {
-    instagram: "https://www.instagram.com/",
-    pinterest: "https://www.pinterest.com/",
-    linkedin: "https://www.linkedin.com/",
+    instagram: 'https://www.instagram.com/',
+    pinterest:  'https://www.pinterest.com/',
+    linkedin:   'https://www.linkedin.com/',
   },
 
   emailjs: {
-    serviceId: "YOUR_EMAILJS_SERVICE_ID",
-    templateId: "YOUR_EMAILJS_TEMPLATE_ID",
-    publicKey: "YOUR_EMAILJS_PUBLIC_KEY",
+    serviceId:  'YOUR_EMAILJS_SERVICE_ID',
+    templateId: 'YOUR_EMAILJS_TEMPLATE_ID',
+    publicKey:  'YOUR_EMAILJS_PUBLIC_KEY',
   },
 };

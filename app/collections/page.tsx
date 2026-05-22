@@ -88,68 +88,86 @@ export default function CollectionsPage() {
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
-              {filteredCollections.map((col, i) => (
-                <Reveal key={col.id} delay={(i % 3) + 1} variant="scale">
-                  <article className="group">
-                    {/* Image */}
-                    <div className="img-hover-wrap relative mb-6">
-                      <ImagePlaceholder
-                        alt={col.title}
-                        aspectRatio={i % 3 === 0 ? "editorial" : "portrait"}
-                        label={col.title}
-                        className="w-full"
-                      />
-                      {col.featured && (
-                        <div className="absolute top-4 left-4 bg-onyx text-ivory px-3 py-1">
-                          <span className="font-body text-xs font-light tracking-widest uppercase">
-                            Sélection
-                          </span>
-                        </div>
-                      )}
-                    </div>
+              {filteredCollections.map((col, i) => {
+                // Get the first image from the collection's images array for the cover
+                const coverImage =
+                  col.images && col.images.length > 0
+                    ? col.images[0]
+                    : col.coverImage;
 
-                    {/* Info */}
-                    <div className="flex items-start justify-between gap-4">
-                      <div className="flex-1 min-w-0">
-                        <span className="label-tag block mb-2">
-                          {col.category} — {col.season}
-                        </span>
-                        <h2
-                          className="font-display font-light text-onyx mb-3"
-                          style={{
-                            fontSize: "clamp(1.3rem, 2.5vw, 1.8rem)",
-                            letterSpacing: "-0.01em",
-                          }}
-                        >
-                          {col.title}
-                        </h2>
-                        <p className="font-body font-light text-muted text-xs leading-relaxed line-clamp-3">
-                          {col.description}
-                        </p>
+                // Determine aspect ratio based on index for variety
+                const aspectRatios: (
+                  | "portrait"
+                  | "editorial"
+                  | "square"
+                  | "wide"
+                  | "tall"
+                )[] = ["portrait", "editorial", "square", "wide", "tall"];
+                const aspectRatio = aspectRatios[i % aspectRatios.length];
+
+                return (
+                  <Reveal key={col.id} delay={(i % 3) + 1} variant="scale">
+                    <article className="group cursor-pointer">
+                      {/* Image */}
+                      <div className="img-hover-wrap relative mb-6">
+                        <ImagePlaceholder
+                          src={coverImage}
+                          alt={col.title}
+                          aspectRatio={aspectRatio}
+                          className="w-full"
+                        />
+                        {col.featured && (
+                          <div className="absolute top-4 left-4 bg-onyx text-ivory px-3 py-1 z-10">
+                            <span className="font-body text-xs font-light tracking-widest uppercase">
+                              Sélection
+                            </span>
+                          </div>
+                        )}
                       </div>
-                      <span className="text-gold text-xl mt-1 flex-shrink-0 group-hover:translate-x-1 transition-transform duration-400">
-                        →
-                      </span>
-                    </div>
 
-                    {/* Tags */}
-                    <div className="flex flex-wrap gap-2 mt-5 pt-5 border-t border-warm/60">
-                      {col.tags.slice(0, 3).map((tag) => (
-                        <span
-                          key={tag}
-                          className="font-body text-xs font-light text-muted tracking-wide"
-                          style={{
-                            fontSize: "0.65rem",
-                            letterSpacing: "0.15em",
-                          }}
-                        >
-                          #{tag}
+                      {/* Info */}
+                      <div className="flex items-start justify-between gap-4">
+                        <div className="flex-1 min-w-0">
+                          <span className="label-tag block mb-2">
+                            {col.category} — {col.season}
+                          </span>
+                          <h2
+                            className="font-display font-light text-onyx mb-3"
+                            style={{
+                              fontSize: "clamp(1.3rem, 2.5vw, 1.8rem)",
+                              letterSpacing: "-0.01em",
+                            }}
+                          >
+                            {col.title}
+                          </h2>
+                          <p className="font-body font-light text-muted text-xs leading-relaxed line-clamp-3">
+                            {col.description}
+                          </p>
+                        </div>
+                        <span className="text-gold text-xl mt-1 flex-shrink-0 group-hover:translate-x-1 transition-transform duration-400">
+                          →
                         </span>
-                      ))}
-                    </div>
-                  </article>
-                </Reveal>
-              ))}
+                      </div>
+
+                      {/* Tags */}
+                      <div className="flex flex-wrap gap-2 mt-5 pt-5 border-t border-warm/60">
+                        {col.tags.slice(0, 3).map((tag) => (
+                          <span
+                            key={tag}
+                            className="font-body text-xs font-light text-muted tracking-wide"
+                            style={{
+                              fontSize: "0.65rem",
+                              letterSpacing: "0.15em",
+                            }}
+                          >
+                            #{tag}
+                          </span>
+                        ))}
+                      </div>
+                    </article>
+                  </Reveal>
+                );
+              })}
             </div>
           )}
         </div>

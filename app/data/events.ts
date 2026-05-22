@@ -1,139 +1,150 @@
-// ─── Events & Fashion Shows Static Data ──────────────────────────────────────
-// Images: place your photos in /public/assets/images/events/
+import type { FashionEvent, EventType } from './types';
 
-import { FashionEvent } from "./types";
-
-export const EVENTS : FashionEvent[] = [
+export const EVENTS: FashionEvent[] = [
   {
-    id: "gala-ritz-2024",
-    title: "Gala Couture — Automne 2024",
-    venue: "Hôtel Ritz Paris",
-    location: "Place Vendôme, Paris",
-    date: "Octobre 2024",
-    type: "Défilé Gala",
-    role: "Direction Artistique & Stylisme Complet",
-    description: `Un défilé intime pour dix maisons de couture dans la Grande Galerie du
-    Ritz Paris. Quarante looks, une mise en scène épurée baignée de lumière
-    dorée. L'événement était réservé aux acheteurs et presse internationale.`,
+    id: 'chiganvy-talent-show',
+    title: 'Chiganvy Talent Show',
+    venue: 'Chiganvy — Scène principale',
+    location: 'Cotonou, Bénin',
+    date: '2024',
+    type: 'Défilé Gala',
+    role: 'Styliste-Modéliste — Créations originales en défilé',
+    description: `Le Chiganvy Talent Show est l'une des scènes mode les plus fédératrices
+du Bénin. Madeleine Koko y présente dix-neuf looks qui révèlent l'étendue
+de son vocabulaire créatif : des pièces structurées, des matières mêlées,
+des silhouettes qui parlent d'une femme contemporaine ancrée dans sa culture.
+Un défilé qui marque un tournant dans son parcours.`,
     highlights: [
-      "12 créateurs invités",
-      "200 guests presse & acheteurs",
-      "Couverture Vogue France & Harper's Bazaar",
-      "Direction artistique complète : scénographie, casting, styling",
+      '19 looks originaux présentés en défilé',
+      'Créations entièrement conçues et réalisées par Madeleine Koko',
+      'Forte présence scénique et identité visuelle marquée',
+      'Reconnaissance du public et des professionnels présents',
     ],
-    coverImage: "/assets/images/events/gala-ritz-cover.jpg",
+    coverImage: '/assets/images/events/chiganvy-cover.jpg',
     images: [
-      "/assets/images/events/gala-ritz-01.jpg",
-      "/assets/images/events/gala-ritz-02.jpg",
-      "/assets/images/events/gala-ritz-03.jpg",
+      '/assets/images/events/chiganvy-01.jpg',
+      '/assets/images/events/chiganvy-02.jpg',
+      '/assets/images/events/chiganvy-03.jpg',
     ],
     featured: true,
-    tag: "Paris Fashion Week",
+    tag: 'Défilé — Cotonou',
   },
   {
-    id: "soiree-plaza-milan",
-    title: "Soirée Capsule — Printemps 2024",
-    venue: "Four Seasons Hotel Milano",
-    location: "Via Gesù, Milan",
-    date: "Février 2024",
-    type: "Présentation Collection",
-    role: "Stylisme & Production",
-    description: `Présentation de collection dans l'intimité des suites et couloirs du Four
-    Seasons Milan. Un événement sur invitation, mêlant art de vivre, mode et
-    gastronomie pour une clientèle privée VIP.`,
+    id: 'snab-indigo',
+    title: 'Salon National des Artisans du Bénin',
+    venue: 'SNAB — Pavillon Mode',
+    location: 'Cotonou, Bénin',
+    date: '2024',
+    type: 'Présentation Collection',
+    role: 'Créatrice exposante — Collection tissu indigo',
+    description: `Le Salon National des Artisans du Bénin (SNAB) est la plus grande vitrine
+de l'artisanat béninois. Madeleine Koko y expose une collection de créations
+en tissu indigo traditionnel, valorisant le savoir-faire des teinturiers
+locaux dans des pièces contemporaines. Une rencontre entre héritage et modernité
+qui attire l'attention des visiteurs, acheteurs et médias présents.`,
     highlights: [
-      "Présentation en 3 espaces distincts",
-      "Collaboration avec le chef étoilé Luca Bianchi",
-      "Clientèle privée internationale",
+      'Collection 3 pièces en tissu indigo du Bénin',
+      'Dialogue entre artisanat traditionnel et coupe contemporaine',
+      'Rencontres avec acheteurs et professionnels du secteur',
+      'Valorisation des artisans teinturiers béninois',
     ],
-    coverImage: "/assets/images/events/plaza-milan-cover.jpg",
+    coverImage: '/assets/images/events/snab-cover.jpg',
     images: [
-      "/assets/images/events/plaza-milan-01.jpg",
-      "/assets/images/events/plaza-milan-02.jpg",
+      '/assets/images/events/snab-01.jpg',
+      '/assets/images/events/snab-02.jpg',
+      '/assets/images/events/snab-03.jpg',
     ],
     featured: true,
-    tag: "Milan Fashion Week",
+    tag: 'Salon Artisanat — Bénin',
   },
   {
-    id: "defile-bristol-2023",
-    title: "Défilé Hors-Saison",
-    venue: "Le Bristol Paris",
-    location: "Rue du Faubourg Saint-Honoré, Paris",
-    date: "Juin 2023",
-    type: "Défilé Privé",
-    role: "Direction Artistique",
-    description: `Un défilé hors-saison commandité par Le Bristol pour célébrer la rénovation
-    de ses suites historiques. Trente looks créés en partenariat avec des artisans
-    français, dans l'esprit de la French Riviera des années 50.`,
+    id: 'fesmma',
+    title: 'FESMMA',
+    venue: 'Festival de la Mode et des Métiers d\'Art',
+    location: 'Bénin',
+    date: '2024',
+    type: 'Gala de Mode',
+    role: 'Styliste participante — Présentation de créations',
+    description: `Le FESMMA est un festival dédié à la mode et aux métiers d'art qui rassemble
+créateurs, artisans et passionnés autour d'une vision commune : promouvoir
+l'excellence du made in Bénin. Madeleine Koko y présente ses créations et
+confirme sa place parmi les voix émergentes de la mode béninoise, avec des
+pièces qui allient maîtrise technique et sensibilité artistique.`,
     highlights: [
-      "30 looks exclusifs",
-      "Artisans français — sellerie, broderie, plissé",
-      "Reportage dans Madame Figaro",
+      'Présentation de 3 créations sélectionnées',
+      'Visibilité auprès du public mode béninois',
+      'Échanges avec d\'autres créateurs et artisans',
+      'Couverture par les médias locaux spécialisés mode',
     ],
-    coverImage: "/assets/images/events/bristol-cover.jpg",
+    coverImage: '/assets/images/events/fesmma-cover.jpg',
     images: [
-      "/assets/images/events/bristol-01.jpg",
-      "/assets/images/events/bristol-02.jpg",
-      "/assets/images/events/bristol-03.jpg",
+      '/assets/images/events/fesmma-01.jpg',
+      '/assets/images/events/fesmma-02.jpg',
+      '/assets/images/events/fesmma-03.jpg',
+    ],
+    featured: true,
+    tag: 'Festival Mode — Bénin',
+  },
+  {
+    id: 'soutenance-formation',
+    title: 'Soutenance de Fin de Formation',
+    venue: 'École de stylisme-modélisme',
+    location: 'Cotonou, Bénin',
+    date: '2024',
+    type: 'Présentation Collection',
+    role: 'Diplômée — Présentation de collection de fin de formation',
+    description: `La soutenance de fin de formation est le moment charnière où Madeleine Koko
+présente officiellement sa collection diplôme devant un jury de professionnels.
+Deux photos témoignent de cet instant décisif : la collection autour du tissu
+indigo béninois reçoit un accueil chaleureux et confirme une maîtrise technique
+et une vision artistique déjà abouties.`,
+    highlights: [
+      'Collection diplôme autour du tissu indigo du Bénin',
+      'Présentation devant jury de professionnels',
+      'Validation des compétences en patronage et confection',
+      'Premier jalon officiel du parcours professionnel',
+    ],
+    coverImage: '/assets/images/events/soutenance-cover.jpg',
+    images: [
+      '/assets/images/events/soutenance-01.jpg',
+      '/assets/images/events/soutenance-02.jpg',
     ],
     featured: false,
-    tag: "Événement Privé",
+    tag: 'Diplôme — Formation',
   },
   {
-    id: "gala-cannes-2023",
-    title: "Gala Croisette",
-    venue: "Hôtel du Cap-Eden-Roc",
-    location: "Antibes, Côte d'Azur",
-    date: "Mai 2023",
-    type: "Gala de Mode",
-    role: "Stylisme Red Carpet & Direction Artistique",
-    description: `Direction artistique du stylisme pour un gala organisé en marge du Festival
-    de Cannes. Vingt personnalités habillées pour la soirée sur la terrasse
-    iconique de l'Eden-Roc.`,
+    id: 'designer-academie',
+    title: 'Designer Académie',
+    venue: 'Designer Académie',
+    location: 'Bénin',
+    date: '2024',
+    type: 'Lancement de Collection',
+    role: 'Étudiante créatrice — Programme intensif stylisme',
+    description: `La Designer Académie est un programme de formation qui accompagne les
+créateurs béninois dans le développement de leur identité et de leurs
+compétences. Madeleine Koko y affine sa technique et structure son univers
+créatif. Les deux photos issues de ce programme montrent une créatrice
+en pleine construction, déjà consciente de sa singularité.`,
     highlights: [
-      "20 personnalités stylisées",
-      "Couverture presse internationale",
-      "Sunset show face à la Méditerranée",
+      'Programme intensif en stylisme et modélisme',
+      'Développement de l\'identité créative',
+      'Maîtrise approfondie du patronage et de la confection',
+      'Intégration dans un réseau de créateurs béninois',
     ],
-    coverImage: "/assets/images/events/cannes-cover.jpg",
+    coverImage: '/assets/images/events/academie-cover.jpg',
     images: [
-      "/assets/images/events/cannes-01.jpg",
-      "/assets/images/events/cannes-02.jpg",
-    ],
-    featured: true,
-    tag: "Festival de Cannes",
-  },
-  {
-    id: "launch-costes-2025",
-    title: "Lancement Capsule Couture",
-    venue: "Hôtel Costes Paris",
-    location: "Rue Saint-Honoré, Paris",
-    date: "Mars 2025",
-    type: "Lancement de Collection",
-    role: "Styling & Set Design",
-    description: `Lancement d'une collection capsule 12 pièces dans l'atmosphère unique de
-    l'Hôtel Costes. Une soirée cocktail-défilé mêlant influenceurs sélectifs,
-    presse lifestyle et clientèle VIP.`,
-    highlights: [
-      "12 pièces capsule exclusives",
-      "Presse et influenceurs triés sur le volet",
-      "Set design : fleurs noires et bougies ambre",
-    ],
-    coverImage: "/assets/images/events/costes-cover.jpg",
-    images: [
-      "/assets/images/events/costes-01.jpg",
-      "/assets/images/events/costes-02.jpg",
+      '/assets/images/events/academie-01.jpg',
+      '/assets/images/events/academie-02.jpg',
     ],
     featured: false,
-    tag: "Paris",
+    tag: 'Formation — Académie',
   },
 ];
 
-export const EVENT_TYPES = [
-  "Tous",
-  "Défilé Gala",
-  "Présentation Collection",
-  "Défilé Privé",
-  "Gala de Mode",
-  "Lancement de Collection",
-];
+export const EVENT_TYPES: string[] = [
+  'Tous',
+  'Défilé Gala',
+  'Présentation Collection',
+  'Gala de Mode',
+  'Lancement de Collection',
+] satisfies (string | EventType)[];

@@ -53,9 +53,9 @@ export default function AboutPage() {
             <div className="md:col-span-5 md:sticky md:top-28">
               <Reveal variant="scale">
                 <ImagePlaceholder
+                  src="/assets/images/about/portrait-main.jpg"
                   alt="Madeleine KOKO — Portrait Studio"
                   aspectRatio="portrait"
-                  label="Portrait"
                 />
               </Reveal>
               {/* Stats */}
@@ -167,16 +167,16 @@ export default function AboutPage() {
             <div className="md:col-span-6 grid grid-cols-2 gap-4">
               <Reveal variant="scale" delay={1}>
                 <ImagePlaceholder
+                  src="/assets/images/about/atelier.jpg"
                   alt="Backstage — atelier"
                   aspectRatio="portrait"
-                  label="Atelier"
                 />
               </Reveal>
               <Reveal variant="scale" delay={2} className="mt-10">
                 <ImagePlaceholder
+                  src="/assets/images/about/onset.jpg"
                   alt="On-set — défilé"
                   aspectRatio="portrait"
-                  label="On-set"
                 />
               </Reveal>
             </div>

@@ -122,6 +122,7 @@ export default function GalleryPage() {
                   {/* Image */}
                   <div className="relative overflow-hidden">
                     <ImagePlaceholder
+                      src={item.src}
                       alt={item.alt}
                       aspectRatio={
                         item.size === "tall"
@@ -130,7 +131,6 @@ export default function GalleryPage() {
                             ? "wide"
                             : "square"
                       }
-                      label={item.caption}
                     />
                     {/* Hover overlay */}
                     <div className="absolute inset-0 bg-onyx/0 group-hover:bg-onyx/30 transition-all duration-400 flex items-center justify-center">
@@ -185,42 +185,44 @@ export default function GalleryPage() {
         >
           {/* Content */}
           <div
-            className="relative w-full max-w-4xl mx-4 animate-fade-in"
+            className="relative w-full max-w-5xl mx-4 animate-fade-in"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Image */}
             {currentLightboxItem && (
-              <ImagePlaceholder
-                alt={currentLightboxItem.alt}
-                aspectRatio={
-                  currentLightboxItem.size === "tall"
-                    ? "portrait"
-                    : currentLightboxItem.size === "wide"
-                      ? "wide"
-                      : "square"
-                }
-                label={currentLightboxItem.caption}
-                className="max-h-[80vh] w-full"
-              />
+              <div className="relative max-h-[85vh] w-full flex items-center justify-center">
+                <ImagePlaceholder
+                  src={currentLightboxItem.src}
+                  alt={currentLightboxItem.alt}
+                  aspectRatio={
+                    currentLightboxItem.size === "tall"
+                      ? "portrait"
+                      : currentLightboxItem.size === "wide"
+                        ? "wide"
+                        : "square"
+                  }
+                  className="max-h-[85vh] w-auto"
+                />
+              </div>
             )}
 
             {/* Caption bar */}
-            <div className="mt-4 flex items-center justify-between">
-              <div>
-                <p className="font-body font-light text-ivory text-sm">
+            <div className="mt-6 flex items-center justify-between">
+              <div className="flex-1">
+                <p className="font-body font-light text-ivory text-sm md:text-base">
                   {currentLightboxItem?.caption}
                 </p>
                 <p className="label-tag-light mt-1">
                   {currentLightboxItem?.category} — {currentLightboxItem?.year}
                 </p>
               </div>
-              <p className="label-tag-light">
+              <p className="label-tag-light ml-4">
                 {lightboxIndex + 1} / {filteredGallery.length}
               </p>
             </div>
           </div>
 
-          {/* Navigation */}
+          {/* Navigation buttons */}
           <button
             className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 text-ivory/60 hover:text-ivory transition-colors duration-300 p-4"
             onClick={(e) => {
@@ -230,12 +232,12 @@ export default function GalleryPage() {
             aria-label="Image précédente"
           >
             <svg
-              width="28"
-              height="28"
+              width="32"
+              height="32"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              strokeWidth="1"
+              strokeWidth="1.5"
               strokeLinecap="round"
               strokeLinejoin="round"
             >
@@ -251,12 +253,12 @@ export default function GalleryPage() {
             aria-label="Image suivante"
           >
             <svg
-              width="28"
-              height="28"
+              width="32"
+              height="32"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              strokeWidth="1"
+              strokeWidth="1.5"
               strokeLinecap="round"
               strokeLinejoin="round"
             >
@@ -264,19 +266,19 @@ export default function GalleryPage() {
             </svg>
           </button>
 
-          {/* Close */}
+          {/* Close button */}
           <button
             className="absolute top-6 right-6 text-ivory/60 hover:text-ivory transition-colors duration-300 p-3"
             onClick={() => dispatch({ type: ACTIONS.CLOSE_LIGHTBOX })}
             aria-label="Fermer la galerie"
           >
             <svg
-              width="22"
-              height="22"
+              width="24"
+              height="24"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              strokeWidth="1"
+              strokeWidth="1.5"
               strokeLinecap="round"
               strokeLinejoin="round"
             >
@@ -284,6 +286,25 @@ export default function GalleryPage() {
               <line x1="6" y1="6" x2="18" y2="18" />
             </svg>
           </button>
+
+          {/* Thumbnail navigation indicator (optional) */}
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+            {filteredGallery.map((_, idx) => (
+              <button
+                key={idx}
+                className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
+                  idx === lightboxIndex
+                    ? "bg-gold w-4"
+                    : "bg-ivory/30 hover:bg-ivory/50"
+                }`}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  dispatch({ type: ACTIONS.OPEN_LIGHTBOX, payload: idx });
+                }}
+                aria-label={`Aller à l'image ${idx + 1}`}
+              />
+            ))}
+          </div>
         </div>
       )}
     </>

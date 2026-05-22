@@ -24,14 +24,15 @@ export default function HomePage() {
         className="relative min-h-screen flex flex-col justify-end overflow-hidden"
         aria-label="Hero"
       >
-        {/* Background */}
+        {/* Background - Utiliser la première image de la première collection featured comme hero */}
         <div className="absolute inset-0 z-0">
           <ImagePlaceholder
+            src={featured[2]?.images?.[2] || featured[2]?.coverImage}
             alt="Koko Made — Hero"
             aspectRatio="wide"
             className="w-full h-full !aspect-auto"
           />
-          <div className="overlay-dark" />
+          <div className="absolute inset-0 bg-black/40" />
         </div>
 
         {/* Top-right metadata tag */}
@@ -172,9 +173,9 @@ export default function HomePage() {
                 >
                   <div className="relative overflow-hidden">
                     <ImagePlaceholder
+                      src={featured[0].images?.[0] || featured[0].coverImage}
                       alt={featured[0].title}
                       aspectRatio="editorial"
-                      label={featured[0].title}
                     />
                   </div>
                   <div className="mt-5 flex items-start justify-between">
@@ -205,9 +206,9 @@ export default function HomePage() {
                   >
                     <div className="relative overflow-hidden">
                       <ImagePlaceholder
+                        src={col.images?.[0] || col.coverImage}
                         alt={col.title}
                         aspectRatio="wide"
-                        label={col.title}
                       />
                     </div>
                     <div className="mt-4 flex items-start justify-between">
@@ -241,9 +242,9 @@ export default function HomePage() {
             <Reveal className="md:col-span-5" variant="scale">
               <div className="relative">
                 <ImagePlaceholder
+                  src="/assets/images/about/portrait.jpg"
                   alt="Portrait styliste"
                   aspectRatio="portrait"
-                  label="Portrait"
                 />
                 <div
                   className="absolute -bottom-4 -right-4 p-6 hidden md:block"
@@ -349,11 +350,11 @@ export default function HomePage() {
                   className="group block relative overflow-hidden img-hover-wrap"
                 >
                   <ImagePlaceholder
+                    src={event.coverImage || event.images?.[0]}
                     alt={event.title}
                     aspectRatio="wide"
-                    label={event.venue}
                   />
-                  <div className="overlay-dark" />
+                  <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors duration-500" />
                   <div className="absolute inset-0 flex flex-col justify-end p-8">
                     <span className="label-tag-light block mb-2">
                       {event.tag} — {event.date}

@@ -81,9 +81,9 @@ export default function EventsPage() {
                   {/* Image */}
                   <div className="md:col-span-5 img-hover-wrap overflow-hidden">
                     <ImagePlaceholder
+                      src={event.images?.[0] || event.coverImage}
                       alt={event.title}
                       aspectRatio={i % 2 === 0 ? "wide" : "editorial"}
-                      label={event.venue}
                       className="w-full h-full"
                     />
                   </div>
