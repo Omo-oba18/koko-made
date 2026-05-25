@@ -27,7 +27,7 @@ export default function HomePage() {
         {/* Background - Utiliser la première image de la première collection featured comme hero */}
         <div className="absolute inset-0 z-0">
           <ImagePlaceholder
-            src={featured[2]?.images?.[2] || featured[2]?.coverImage}
+            src="/assets/images/about/hero.jpg"
             alt="Koko Made — Hero"
             aspectRatio="wide"
             className="w-full h-full !aspect-auto"
